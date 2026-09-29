@@ -54,13 +54,10 @@
     .nav{
       min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:25px
     }
-    .brand{display:flex;align-items:center;gap:13px}
-    .brand-mark{
-      width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;
-      display:grid;place-items:center;color:var(--gold);font-family:var(--serif);font-size:1.5rem
+    .brand{display:flex;align-items:center;gap:13px;flex-shrink:0}
+    .brand-logo{
+      width:auto;height:64px;max-width:190px;object-fit:contain;display:block
     }
-    .brand-text strong{display:block;color:var(--white);font-family:var(--serif);font-size:1.35rem;font-weight:600;line-height:1}
-    .brand-text span{display:block;color:var(--gold-light);font-size:.55rem;letter-spacing:.2em;text-transform:uppercase;margin-top:5px}
     .nav-links{display:flex;gap:22px;align-items:center}
     .nav-links a{color:#f5f1e8;font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;transition:.25s}
     .nav-links a:hover{color:var(--gold-light)}
@@ -113,8 +110,8 @@
       background:#f9f6ef;border:1px solid rgba(16,37,31,.12);box-shadow:0 15px 45px rgba(16,37,31,.07);
       overflow:hidden;display:flex;flex-direction:column
     }
-    .concept-image{height:300px;background:var(--green);display:flex;align-items:center;justify-content:center;position:relative;padding:22px;box-sizing:border-box}
-    .concept-image img{width:auto;height:auto;max-width:210px;max-height:255px;object-fit:contain;display:block}
+    .concept-image{height:280px;background:var(--green);display:flex;align-items:center;justify-content:center;position:relative;padding:20px;box-sizing:border-box}
+    .concept-image img{width:auto;height:auto;max-width:180px;max-height:220px;object-fit:contain;display:block}
     .concept-body{padding:32px}
     .concept-number{font-size:.64rem;letter-spacing:.2em;color:var(--gold);text-transform:uppercase}
     .concept h3{font-family:var(--serif);font-size:2.5rem;font-weight:500;margin:8px 0}
@@ -197,6 +194,7 @@
 
     @media(max-width:600px){
       .nav{min-height:72px}
+      .brand-logo{height:54px;max-width:165px}
       .hero{padding-top:72px}
       .hero:after{inset:10px}
       .hero h1{font-size:4.4rem}
@@ -217,11 +215,7 @@
 <header>
   <div class="container nav">
     <a href="#home" class="brand" aria-label="Vriksha The Flavour Hub home">
-      <div class="brand-mark">V</div>
-      <div class="brand-text">
-        <strong>Vriksha</strong>
-        <span>The Flavour Hub</span>
-      </div>
+      <img class="brand-logo" src="vriksha-logo.png" alt="Vriksha The Flavour Hub">
     </a>
 
     <button class="menu-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
